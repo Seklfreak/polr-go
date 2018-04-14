@@ -13,7 +13,7 @@ import (
 func Test_Shorten(t *testing.T) {
 	setup()
 
-	endingSuffix := strconv.FormatInt(time.Now().Unix(), 10)
+	endingSuffix := strconv.FormatInt(time.Now().UnixNano(), 10)
 
 	tests := []struct {
 		longUrl       string
