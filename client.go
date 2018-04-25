@@ -90,12 +90,12 @@ func (c *Polr) newRequest(method, path string, body []byte) (*http.Request, erro
 	// Set up header
 	req.Header.Add("User-Agent", c.UserAgent)
 
-	// set api_key as GET parameter
+	// set key and response_type as GET parameter
 	queries, err := url.ParseQuery(req.URL.RawQuery)
 	if err != nil {
 		return nil, err
 	}
-	queries.Set("api_key", c.ApiKey)
+	queries.Set("key", c.ApiKey)
 	queries.Set("response_type", "json")
 	req.URL.RawQuery = queries.Encode()
 
