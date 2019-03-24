@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	pkgVersion = "0.0.1"
+	pkgVersion = "0.0.2"
 	userAgent  = "polr-go/" + pkgVersion
 )
 
